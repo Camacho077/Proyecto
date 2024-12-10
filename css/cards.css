@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&display=swap');
+
+:root {
+    --very-dark: #403D3C;
+    --dark: #FFA07A;
+    --purple: #FF6F61;
+    --shadow-purple: rgba(137, 44, 220, 0.75);
+    --white: #F4E3D7;
+    --font: "Gabarito", sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Previene barras de desplazamiento horizontales no deseadas */
+}
+
+.sua {
+    width: 100vw; /* Fondo ocupa todo el ancho */
+    height: 400px;
+    background: var(--very-dark-purple); /* Fondo gris */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px; /* Espaciado interno */
+    gap: 10px; /* Espaciado entre las tarjetas */
+    box-sizing: border-box;
+}
+
+/* Grilla para las tarjetas */
+.card {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Tarjetas compactas */
+    width: 100%;
+    align-items: flex-start; /* Alinea a la izquierda */
+    padding: 10px; /* Espaciado interno */
+    gap: 10px; /* Espaciado entre las tarjetas */
+    box-sizing: border-box;
+    margin-top: 150px;
+    margin-left: 10px; /* Mueve hacia la izquierda */
+}
+
+/* Tarjeta individual */
+.card__contenido {
+    background: #5A504D;
+    border-radius: 8px; /* Bordes redondeados mínimos */
+    padding: 5px; /* Espaciado interno compacto */
+    box-shadow: 0 12px 24px rgba(255, 102, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 220px; /* Altura reducida */
+    width: 380px;
+    margin-bottom: 100px;
+    overflow: hidden;
+    text-align: center;
+    transition: box-shadow 0.4s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.card__contenido:hover {
+    box-shadow: 0 16px 32px rgba(139, 0, 0, 0.8); /* Sombra aún más intensa */
+    transform: scale(1.05); 
+    transition: box-shadow 0.4s ease-in-out, transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+/* Logo */
+.card__logo {
+    width: 60px; /* Iconos compactos */
+    height: 60px;
+    margin-bottom: 5px;
+}
+
+.card__logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Títulos y precios */
+.card__tittle {
+    color: var(--dark);
+    font-size: 1.5rem; /* Texto compacto */
+    font-weight: 700;
+    margin-bottom: 2px;
+    transition: color 0.3s ease-in-out;
+}
+
+.card__precio {
+    color: var(--purple);
+    font-size: 1rem; /* Texto reducido */
+    font-weight: 600;
+    margin-bottom: 2px;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Botón */
+.card__button {
+    background-color: var(--purple);
+    color: var(--white);
+    padding: 10px 10px; /* Botón más compacto */
+    border-radius: 15px;
+    font-size: 0.8rem; /* Texto reducido */
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.card__button:hover {
+    background-color: var(--dark);
+    transform: scale(1.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .sua {
+        padding: 10px; /* Espaciado reducido */
+    }
+
+    .card {
+        grid-template-columns: 1fr; /* Una sola columna en pantallas pequeñas */
+    }
+
+    .card__contenido {
+        height: 150px; /* Aún más pequeñas en pantallas pequeñas */
+        padding: 5px;
+    }
+
+    .card__logo {
+        width: 15px;
+        height: 15px;
+    }
+
+    .card__tittle, .card__precio {
+        font-size: 0.5rem;
+    }
+
+    .card__button {
+        font-size: 0.5rem;
+        padding: 3px 5px;
+    }
+}

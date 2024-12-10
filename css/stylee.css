@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: #F4E3D7; /* Color de fondo suave */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    margin-top: 0;
+}
+
+.enca {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 65px;
+    background: #403D3C;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    padding: 0 20px; /* Añadido un pequeño espaciado */
+}
+
+.navar {
+    display: flex;
+    margin-right: 10px;
+}
+
+.INI {
+    margin-left: 30px;
+    margin-top: 5px;
+}
+
+.INI a {
+    text-decoration: none;
+    color: #F4E3D7;
+    text-decoration: uppercase;
+    font-size: 20px;
+}
+
+.navar a {
+    display: block;
+    padding: 20px;
+    color: #F4E3D7;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.navar a:hover {
+    background: #A35709;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px; /* Aquí ajustas el espacio entre el encabezado y el resto del contenido */
+}
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+li a {
+    display: block;
+    text-decoration: none;
+    background-color: #F0F8FF;
+    color: #333;
+    padding: 15px 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 400px;
+    background-color: #F4E3D7; /* Color de fondo del formulario */
+    padding: 45px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    margin-top: 200px;
+}
+
+form h2 {
+    font-size: 35px;
+    color: #F4A259; /* Título del formulario */
+    margin-bottom: 35px;
+}
+
+
+input, fieldset {
+    background-color: #F1F1F1; /* Fondo claro para los campos */
+    padding: 18px 20px;
+    margin-bottom: 20px;
+    border: 0;
+    border-radius: 25px;
+    color: #403C3D; /* Color del texto en los campos */
+    outline: none;
+    font-size: 16px;
+}
+
+.label2 {
+    color: #404040;
+}
+
+.TITLE {
+    margin-block-start: 16px;
+    color: #404040;
+}
+
+select {
+    border-radius: 5px;
+    border: 0;
+    font-size: 16px;
+    color: #403C3D;
+    padding: 18px 20px;
+    margin: 25px;
+}
+
+.filas {
+    text-align: left;
+    margin: 5px 0;
+}
+
+.BT {
+    background-color: #A35709; /* Color de fondo del botón */
+    color: #F4E3D7; /* Color del texto del botón */
+    text-transform: uppercase;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+}
+
+.BT:hover {
+    background-color: #F4A259; /* Color de fondo del botón al pasar el mouse */
+}
